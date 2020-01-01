@@ -40,6 +40,23 @@ class DoubleLinkedlist():
 		new_node.prev=node
 		new_node.next=temp
 		temp.prev=new_node
+
+	def deleteAt():
+		pass
+	def deleteTail(self):
+		node=self.head
+		while(node.next is not None): 
+			# print(" % d" %(node.data), )
+			last = node 
+			node = node.next
+			# print(node.data)
+		temp=node.prev
+		temp.next=None
+		
+	def delBeg(self):
+		temp=self.head
+		self.head=temp.next
+		temp=None
 		
 	def print(self, node): 
 
@@ -62,8 +79,8 @@ if __name__ == '__main__':
 	print('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
 	# llist.insertAtEnd(999)
 	llist.insertAt(2,70)
-	# llist.push(200)
-
+	llist.delBeg()
+	llist.deleteTail()
 	# llist.insert(2,999)
 	llist.print(llist.head)
 
